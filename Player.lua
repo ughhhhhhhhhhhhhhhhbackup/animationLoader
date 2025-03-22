@@ -118,7 +118,7 @@ RunService.Stepped:Connect(function(_, Delta)
 
 		if Anim.Frames[Anim.Index] then
 			--//warn('Continue')
-			continue
+			--//continue
 		end
 
 		if Anim.Loops then
