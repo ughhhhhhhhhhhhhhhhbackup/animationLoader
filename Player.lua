@@ -118,7 +118,7 @@ RunService.Stepped:Connect(function(_, Delta)
 			continue
 		end
 
-		if true then
+		if Anim.Loops then
 			Anim.TimePased = 0
 			Anim.Start = time()
 
