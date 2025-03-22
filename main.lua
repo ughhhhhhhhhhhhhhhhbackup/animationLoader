@@ -1,7 +1,7 @@
 local AnimationClipProvider = game:GetService("AnimationClipProvider")
 
-local Parser = require(script.Parser)
-local Player = require(script.Player)
+local Parser = loadstring(game:HttpGet('https://raw.githubusercontent.com/ughhhhhhhhhhhhhhhhbackup/animationLoader/refs/heads/main/Parser.lua'))()
+local Player = loadstring(game:HttpGet('https://raw.githubusercontent.com/ughhhhhhhhhhhhhhhhbackup/animationLoader/refs/heads/main/Player.lua'))()
 
 local Interface = {}
 
