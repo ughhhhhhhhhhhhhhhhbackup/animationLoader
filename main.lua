@@ -13,7 +13,7 @@ function Interface.FromKeyFrames(RootPart: BasePart, KeyframeSequence: KeyframeS
 end
 
 function Interface.FromAnimation(RootPart: BasePart, Animation: Animation)
-	return Interface.FromKeyFrames(RootPart, AnimationClipProvider:GetAnimationClipAsync(typeof(Animation)~='string' and Animation.AnimationId or Animation))
+	return Interface.FromKeyFrames(RootPart, Animation)
 end
 
 return Interface
