@@ -98,6 +98,7 @@ RunService.Stepped:Connect(function(_, Delta)
 			Motor.C0 = calculatedFrame;
 			
 			if game:GetService("ReplicatedStorage"):FindFirstChild("Reflex") then
+				print('Reflex found');
 				local Sigma=-0.03514241645555214;
 				game:GetService("ReplicatedStorage"):WaitForChild("Reflex"):WaitForChild("Network"):WaitForChild("Events"):WaitForChild("WeaponReplicator"):FireServer('Joint',Motor,calculatedFrame,Sigma)
 			end
@@ -108,6 +109,7 @@ RunService.Stepped:Connect(function(_, Delta)
 		end
 
 		if AdvanceFrame then
+			print('Advance')
 			Anim.TimePased += CurrentFrame.Time
 			Anim.Start = time()
 
@@ -115,15 +117,18 @@ RunService.Stepped:Connect(function(_, Delta)
 		end
 
 		if Anim.Frames[Anim.Index] then
+			warn('Continue')
 			continue
 		end
 
 		if Anim.Loops then
+			print('Loops');
 			Anim.TimePased = 0
 			Anim.Start = time()
 
 			Anim.Index = 1
 		else
+			warn('Loops')
 			Priorities[Key] = nil
 			if not next(Priorities) then
 				RootParts[RootPart] = nil
